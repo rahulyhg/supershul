@@ -1,0 +1,189 @@
+// Load Utility Modules
+@import "core-css/utilities/loader";
+
+// Load Theme Variables
+@import "theme_vars";
+
+//
+// Load HT Core Modules
+//
+
+// Load CSS Normalize
+@import "core-css/modules/normalize";
+
+// Load Core CSS
+@import "core-css/modules/core_classes";
+
+// Load HT Grid
+@import "core-css/modules/ht_grid";
+
+// Load Core Form CSS
+@import "core-css/modules/forms";
+
+// Load _wpgallery.scss
+@import "core-css/modules/wpgallery";
+
+
+//
+// Load Theme Partials
+//
+
+// Load Site Structure CSS
+@import "partials/site-structure";
+
+@import "partials/site-header";
+
+@import "partials/site-footer";
+
+@import "partials/site-nav";
+
+@import "partials/sidebar";
+
+.entry-content {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+	&::selection {
+	background: $typog-highlight-color;
+	}
+	&::-moz-selection {
+		background: $typog-highlight-color;
+	}
+  @import "partials/entry-content";
+  @import "partials/wpgallery";
+}
+
+@import "partials/homepage";
+
+@import "partials/page-header";
+
+@import "partials/breadcrumbs";
+
+@import "partials/entry-author";
+
+@import "partials/hentry";
+
+@import "partials/search";
+
+@import "partials/comments";
+
+@import "partials/wpwidgets";
+
+@import "partials/pagination";
+
+@import "partials/404";
+
+@import "partials/tags";
+
+
+
+
+/* Misc */
+body.single {
+  //.entry-content {
+  //  margin: 0 0 20px;
+  //  border-bottom: 1px solid $border-color;
+  //}
+  .hentry {
+    margin: 0 0 20px;
+    .entry-header {
+      border-bottom: 1px solid $border-color;
+      margin: 0 0 25px;
+      padding: 0 0 20px;
+    }
+    .entry-title {
+      font-size: 20px;
+      @media screen and (min-width: 321px) {
+        font-size: 22px;
+      }
+      @media screen and (min-width: 500px) {
+        font-size: 28px;
+      }
+    }
+  }
+}
+body.single-ht_kb {
+  .hentry {
+    border-bottom: 0;
+    margin: 0;
+  }
+}
+
+.avatar {
+  @include border-radius(99%);
+}
+
+// Single page.php styling
+body.page {
+  .page {
+    border-bottom: 0;
+  }
+}
+
+
+body.author {
+  #content {
+    .hentry.post,
+    .hentry.ht_kb  {
+      padding:15px 0;
+      @media screen and (min-width: 500px) {
+        padding:30px 0;
+      }
+    }
+  }
+}
+
+
+.embed-container {
+  position: relative; 
+  padding-bottom: 56.25%; 
+  height: 0; 
+  overflow: hidden; 
+  max-width: 100%;
+  iframe, 
+  object, 
+  embed {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+  }
+}
+
+
+.tocheckout {
+  .wp-video-shortcode {
+    max-width: 100%;
+  }
+  .wp-video {
+    height: auto !important;
+  }
+  .wp-audio-shortcode {
+    max-width: 100%;
+  }
+  .entry-content .twitter-tweet-rendered {
+    max-width: 100% !important; /* Override the Twitter embed fixed width */
+  }
+  .entry-content .cards-multimedia img {
+      height: auto;
+  }
+  // Fix: Responsive fix for WP video shortcode
+  .mejs-container {
+    width: 100% !important;
+    height: auto !important;
+    padding-top: 57%;
+  }
+  .mejs-overlay, .mejs-poster {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .mejs-mediaelement video {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

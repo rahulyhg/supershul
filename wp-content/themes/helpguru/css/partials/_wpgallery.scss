@@ -1,0 +1,90 @@
+/**
+* @file _wpgallery.scss
+*/
+
+
+.gallery  {
+	clear: both;
+	margin-bottom: $typog-vertspace;
+	overflow: hidden;
+	&.gallery-columns-2,
+	&.gallery-columns-3,
+	&.gallery-columns-4,
+	&.gallery-columns-5,
+	&.gallery-columns-6,
+	&.gallery-columns-7,
+	&.gallery-columns-8,
+	&.gallery-columns-9 {
+		.gallery-item {
+			float: left;
+		}
+	}
+	&.gallery-columns-1 {}
+	&.gallery-columns-2 {
+		.gallery-item {
+			width: 50%;
+			&:nth-child(2n + 3) {
+				clear: left;
+			}
+		}
+	}
+	&.gallery-columns-3 {
+		.gallery-item {
+			width: 33.333%;
+			&:nth-child(3n + 4) {
+				clear: left;
+			}
+		}
+	}
+	&.gallery-columns-4 {
+		.gallery-item {
+			width: 25%;
+			&:nth-child(4n + 5) {
+				clear: left;
+			}
+		}
+	}
+	&.gallery-columns-5 {
+		.gallery-item {
+			width: 20%;
+			&:nth-child(5n + 6) {
+				clear: left;
+			}
+		}
+	}
+	&.gallery-columns-6 {
+		.gallery-item {
+			width: 16.666%;
+			&:nth-child(6n + 7) {
+				clear: left;
+			}
+		}
+	}
+	&.gallery-columns-7 {
+		.gallery-item {
+			width: 14.285%;
+			&:nth-child(7n + 8) {
+				clear: left;
+			}
+		}
+	}
+	&.gallery-columns-8 {
+		.gallery-item {
+			width: 12.5%;
+			&:nth-child(8n + 9) {
+				clear: left;
+			}
+		}
+	}
+	&.gallery-columns-9 {
+		.gallery-item {
+			width: 11.111%;
+			&:nth-child(9n + 10) {
+				clear: left;
+			}
+		}
+	}
+	.gallery-item {
+
+	}
+}
